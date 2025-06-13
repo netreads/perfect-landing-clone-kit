@@ -1,10 +1,13 @@
+
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductDetails } from "@/components/ProductDetails";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { ArrowLeft, Heart, Flag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const Index = () => {
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="border-b border-gray-200 p-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -13,7 +16,7 @@ const Index = () => {
             Back to search results
           </Button>
           <div className="text-red-600 font-medium">
-            Only 2 left and in 2 carts
+            Only 47 left and in 23 carts
           </div>
         </div>
       </div>
@@ -40,6 +43,8 @@ const Index = () => {
           <ReviewsSection />
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;

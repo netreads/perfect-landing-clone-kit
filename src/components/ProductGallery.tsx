@@ -4,11 +4,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const productImages = [
-  "/lovable-uploads/09710076-9526-4607-80d9-3a5572f79027.png",
-  "/placeholder.svg",
-  "/placeholder.svg",
-  "/placeholder.svg",
-  "/placeholder.svg"
+  "/lovable-uploads/2753c287-7486-4b4e-88ac-5ef5da90adde.png",
+  "/lovable-uploads/36375b62-7bb5-44c4-bbdc-78eb145680ac.png",
+  "/lovable-uploads/07cecaf3-a232-474d-beb1-0de858dc77a4.png",
+  "/lovable-uploads/b50a3a7c-fc72-4f15-9cee-40367f9b0214.png",
+  "/lovable-uploads/ba399d13-6152-42c7-937a-8ea129c5279d.png",
+  "/lovable-uploads/6ad93064-ce6f-4098-8d30-fc9b1c7de237.png"
 ];
 
 export const ProductGallery = () => {
@@ -28,7 +29,7 @@ export const ProductGallery = () => {
       <div className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden">
         <img
           src={productImages[currentImage]}
-          alt="Medical Social Media Templates"
+          alt="Kids Educational Worksheets Bundle - Sample Activities"
           className="w-full h-full object-cover"
         />
         
@@ -65,7 +66,7 @@ export const ProductGallery = () => {
           >
             <img
               src={image}
-              alt={`Product view ${index + 1}`}
+              alt={`Worksheet sample ${index + 1}`}
               className="w-full h-full object-cover"
             />
           </button>

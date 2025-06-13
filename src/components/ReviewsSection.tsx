@@ -9,67 +9,67 @@ const reviews = [
   {
     id: 1,
     rating: 5,
-    author: "Dr. Sarah Mitchell",
-    date: "2 days ago",
-    content: "Absolutely amazing templates! As a healthcare professional, I was struggling to create engaging social media content. These templates have transformed my Instagram presence. The quality is outstanding and they're so easy to customize in Canva. My patient engagement has increased by 300%!",
+    author: "Sarah Johnson",
+    date: "3 days ago",
+    content: "Absolutely amazing collection! As a homeschooling mom of 3, I was struggling to find quality worksheets that would keep my kids engaged. This bundle has been a lifesaver! The variety is incredible - from basic tracing for my 3-year-old to advanced math problems for my 6-year-old. My children actually ask to do 'worksheet time' now!",
     verified: true,
     recommended: true,
-    helpful: 47,
-    profession: "Healthcare Professional",
-    images: 3,
-    purchasedItem: "Medical Instagram Templates - Complete Pack"
+    helpful: 89,
+    profession: "Homeschooling Parent",
+    images: 4,
+    purchasedItem: "Complete 11,000+ Worksheets Bundle + Bonus Coloring Sheets"
   },
   {
     id: 2,
     rating: 5,
     author: "Maria Rodriguez",
-    date: "5 days ago",
-    content: "¡Increíbles plantillas! The Spanish versions are perfect for my clinic in Mexico. Professional design, easy to edit, and my patients love the educational content I can now create. Worth every penny! The PLR license is a huge bonus.",
+    date: "1 week ago",
+    content: "¡Increíble valor! I'm a preschool teacher and these worksheets have transformed my classroom activities. The quality is outstanding and the kids love the colorful designs. The organization by age and subject makes it so easy to find exactly what I need. Best educational purchase I've made this year!",
     verified: true,
     recommended: true,
-    helpful: 32,
-    profession: "Clinic Owner",
-    images: 2,
-    purchasedItem: "Medical Social Media Templates + PLR Rights"
+    helpful: 67,
+    profession: "Preschool Teacher",
+    images: 6,
+    purchasedItem: "Educational Worksheets Bundle - Ages 2.5-7"
   },
   {
     id: 3,
     rating: 5,
-    author: "Dr. James Wilson",
+    author: "Jennifer Smith",
     date: "1 week ago",
-    content: "I've purchased many template packs before, but this one stands out. The psychological health templates are particularly well-designed and evidence-based. My mental health practice has seen a 250% increase in social media followers since using these.",
+    content: "My 4-year-old daughter was struggling with letter recognition until we started using these worksheets. The progression is perfect and she's now reading simple words! The bonus coloring sheets are an added treasure. Worth every penny and more. Thank you for creating such a comprehensive learning resource!",
     verified: true,
     recommended: true,
-    helpful: 89,
-    profession: "Psychologist",
-    images: 4,
-    purchasedItem: "Psychology & Mental Health Template Bundle"
+    helpful: 142,
+    profession: "Parent",
+    images: 3,
+    purchasedItem: "Kids Learning Worksheets + 1500 Coloring Sheets Bonus"
   },
   {
     id: 4,
     rating: 5,
-    author: "Lisa Chen",
-    date: "1 week ago",
-    content: "As a health coach, these templates save me hours every week! The variety is incredible - from nutrition tips to workout motivation. The Canva integration is seamless. My clients always ask where I get my beautiful graphics from!",
+    author: "Dr. Amanda Chen",
+    date: "2 weeks ago",
+    content: "As a pediatric occupational therapist, I'm always looking for quality resources to help children develop fine motor skills and cognitive abilities. This collection exceeds all expectations! The worksheets are professionally designed, age-appropriate, and incredibly effective. I now recommend this to all my clients' parents.",
     verified: true,
     recommended: true,
-    helpful: 56,
-    profession: "Health Coach",
-    images: 1,
-    purchasedItem: "Complete Medical Template Collection"
+    helpful: 78,
+    profession: "Pediatric OT",
+    images: 2,
+    purchasedItem: "Complete Early Childhood Development Worksheet Bundle"
   },
   {
     id: 5,
     rating: 5,
-    author: "Dr. Michael Brown",
+    author: "Michael Thompson",
     date: "2 weeks ago",
-    content: "Exceptional quality and value! The templates cover everything from general health tips to specialized medical content. The MRR license allows me to offer these to my colleagues too. Highly professional and medically accurate content.",
+    content: "Outstanding value for money! My twin boys (age 5) love these worksheets. The math activities have really helped them understand numbers and counting. The variety keeps them engaged and I love that I can print as many copies as I need. Customer service was also very helpful when I had download questions.",
     verified: true,
     recommended: true,
-    helpful: 73,
-    profession: "Medical Director",
+    helpful: 95,
+    profession: "Father of Twins",
     images: 5,
-    purchasedItem: "Medical Templates with MRR License"
+    purchasedItem: "Printable Kids Worksheets - Complete Bundle"
   }
 ];
 
@@ -82,19 +82,19 @@ export const ReviewsSection = () => {
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
               <Star className="w-8 h-8 fill-yellow-400 text-yellow-400" />
-              <span className="text-3xl font-bold">4.9</span>
+              <span className="text-3xl font-bold">4.8</span>
             </div>
             <div>
               <div className="text-lg font-semibold">Excellent</div>
-              <div className="text-gray-600">Based on 2,847 reviews</div>
+              <div className="text-gray-600">Based on 987 reviews</div>
             </div>
           </div>
           <div className="text-right">
             <Badge className="bg-green-100 text-green-800 border-green-200 mb-2">
               <Award className="w-4 h-4 mr-1" />
-              Top Rated
+              Parents' Choice
             </Badge>
-            <div className="text-sm text-gray-600">98% recommend this product</div>
+            <div className="text-sm text-gray-600">96% recommend this bundle</div>
           </div>
         </div>
 
@@ -107,11 +107,11 @@ export const ReviewsSection = () => {
               <div className="flex-1 bg-gray-200 rounded-full h-2">
                 <div 
                   className="bg-yellow-400 h-2 rounded-full" 
-                  style={{ width: stars === 5 ? '85%' : stars === 4 ? '12%' : '2%' }}
+                  style={{ width: stars === 5 ? '87%' : stars === 4 ? '9%' : '3%' }}
                 ></div>
               </div>
               <span className="text-xs text-gray-600">
-                {stars === 5 ? '2,420' : stars === 4 ? '341' : stars === 3 ? '57' : stars === 2 ? '18' : '11'}
+                {stars === 5 ? '859' : stars === 4 ? '89' : stars === 3 ? '25' : stars === 2 ? '8' : '6'}
               </span>
             </div>
           ))}
@@ -120,33 +120,33 @@ export const ReviewsSection = () => {
 
       <div className="text-sm text-gray-600 flex items-center gap-2">
         <Verified className="w-4 h-4 text-blue-600" />
-        All reviews are from verified buyers
+        All reviews are from verified purchases
       </div>
 
       {/* Enhanced Rating Categories */}
       <div className="grid grid-cols-3 gap-4">
         <Card className="p-4 text-center bg-gradient-to-br from-orange-50 to-red-50">
           <div className="text-2xl font-bold text-orange-600">4.9/5</div>
-          <div className="text-sm text-gray-600">Template Quality</div>
-          <div className="text-xs text-green-600 mt-1">Exceptional</div>
+          <div className="text-sm text-gray-600">Content Quality</div>
+          <div className="text-xs text-green-600 mt-1">Outstanding</div>
         </Card>
         <Card className="p-4 text-center bg-gradient-to-br from-green-50 to-emerald-50">
-          <div className="text-2xl font-bold text-green-600">5.0/5</div>
-          <div className="text-sm text-gray-600">Delivery Speed</div>
-          <div className="text-xs text-green-600 mt-1">Instant</div>
+          <div className="text-2xl font-bold text-green-600">4.8/5</div>
+          <div className="text-sm text-gray-600">Kid Engagement</div>
+          <div className="text-xs text-green-600 mt-1">Excellent</div>
         </Card>
         <Card className="p-4 text-center bg-gradient-to-br from-blue-50 to-indigo-50">
-          <div className="text-2xl font-bold text-blue-600">4.8/5</div>
-          <div className="text-sm text-gray-600">Customer Service</div>
-          <div className="text-xs text-green-600 mt-1">Outstanding</div>
+          <div className="text-2xl font-bold text-blue-600">4.7/5</div>
+          <div className="text-sm text-gray-600">Value for Money</div>
+          <div className="text-xs text-green-600 mt-1">Amazing</div>
         </Card>
       </div>
 
       {/* Reviews Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-xl font-semibold">Customer Reviews</h3>
-          <p className="text-sm text-gray-600">See what healthcare professionals are saying</p>
+          <h3 className="text-xl font-semibold">Parent Reviews</h3>
+          <p className="text-sm text-gray-600">See what families are saying about our worksheets</p>
         </div>
         <Select defaultValue="helpful">
           <SelectTrigger className="w-48">
@@ -205,7 +205,7 @@ export const ReviewsSection = () => {
               {/* Additional Info */}
               {review.images && (
                 <div className="text-sm text-gray-600">
-                  <span className="font-medium">📷 {review.images} photos attached</span>
+                  <span className="font-medium">📷 {review.images} photos of kids using worksheets</span>
                 </div>
               )}
 
@@ -217,7 +217,7 @@ export const ReviewsSection = () => {
               {/* Review Footer */}
               <div className="flex items-center justify-between pt-3 border-t">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
                     <span className="text-sm font-medium text-white">
                       {review.author.charAt(0)}
                     </span>
@@ -244,7 +244,7 @@ export const ReviewsSection = () => {
         <Button variant="outline" className="px-8">
           Load More Reviews
         </Button>
-        <p className="text-sm text-gray-600 mt-2">Showing 5 of 2,847 reviews</p>
+        <p className="text-sm text-gray-600 mt-2">Showing 5 of 987 reviews</p>
       </div>
     </div>
   );
