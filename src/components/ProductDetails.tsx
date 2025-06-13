@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-
 export const ProductDetails = () => {
   const [isFavorited, setIsFavorited] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
@@ -13,41 +12,37 @@ export const ProductDetails = () => {
     seconds: 0
   });
   const [saleProgress, setSaleProgress] = useState(75);
-
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date();
       const currentHour = now.getHours();
       const currentMinute = now.getMinutes();
       const currentSecond = now.getSeconds();
-      
+
       // Calculate time until end of day (23:59:59)
       const endOfDay = new Date();
       endOfDay.setHours(23, 59, 59, 999);
-      
       const timeDiff = endOfDay.getTime() - now.getTime();
-      
       const hours = Math.floor(timeDiff / (1000 * 60 * 60));
-      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-      
-      setTimeLeft({ hours, minutes, seconds });
-      
+      const minutes = Math.floor(timeDiff % (1000 * 60 * 60) / (1000 * 60));
+      const seconds = Math.floor(timeDiff % (1000 * 60) / 1000);
+      setTimeLeft({
+        hours,
+        minutes,
+        seconds
+      });
+
       // Calculate progress based on time of day (60% to 96%)
       const totalSecondsInDay = 24 * 60 * 60;
       const secondsElapsed = currentHour * 3600 + currentMinute * 60 + currentSecond;
-      const progressPercent = 96 - (36 * secondsElapsed / totalSecondsInDay); // 96% to 60%
+      const progressPercent = 96 - 36 * secondsElapsed / totalSecondsInDay; // 96% to 60%
       setSaleProgress(Math.max(60, Math.min(96, progressPercent)));
     };
-
     calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
-
     return () => clearInterval(timer);
   }, []);
-
-  return (
-    <div className="space-y-6 lg:space-y-8">
+  return <div className="space-y-6 lg:space-y-8">
       {/* Enhanced Price Section */}
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-6 lg:p-8">
         <div className="text-center mb-4">
@@ -118,9 +113,7 @@ export const ProductDetails = () => {
         <div className="flex flex-wrap items-center gap-4 lg:gap-6 text-base sm:text-lg">
           <div className="flex items-center gap-2">
             <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-              ))}
+              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
             </div>
             <span className="font-bold text-lg">4.8</span>
             <span className="text-gray-600">(987+ reviews)</span>
@@ -161,41 +154,9 @@ export const ProductDetails = () => {
 
       {/* Enhanced Highlights */}
       <div className="space-y-6">
-        <h3 className="text-xl lg:text-2xl font-bold">Why parents love this bundle?</h3>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-          <div className="flex items-start gap-4 p-4 lg:p-6 bg-blue-50 rounded-xl">
-            <BookOpen className="w-6 h-6 text-blue-600 mt-1" />
-            <div>
-              <div className="font-bold text-blue-900 text-lg">Educational Excellence</div>
-              <div className="text-base text-blue-700">Designed by early childhood experts</div>
-            </div>
-          </div>
-          
-          <div className="flex items-start gap-4 p-4 lg:p-6 bg-green-50 rounded-xl">
-            <Zap className="w-6 h-6 text-green-600 mt-1" />
-            <div>
-              <div className="font-bold text-green-900 text-lg">Instant Access</div>
-              <div className="text-base text-green-700">Download immediately after purchase</div>
-            </div>
-          </div>
-          
-          <div className="flex items-start gap-4 p-4 lg:p-6 bg-purple-50 rounded-xl">
-            <Smile className="w-6 h-6 text-purple-600 mt-1" />
-            <div>
-              <div className="font-bold text-purple-900 text-lg">Fun & Engaging</div>
-              <div className="text-base text-purple-700">Kids love these colorful activities</div>
-            </div>
-          </div>
-          
-          <div className="flex items-start gap-4 p-4 lg:p-6 bg-orange-50 rounded-xl">
-            <Target className="w-6 h-6 text-orange-600 mt-1" />
-            <div>
-              <div className="font-bold text-orange-900 text-lg">Skill Development</div>
-              <div className="text-base text-orange-700">Builds essential learning foundations</div>
-            </div>
-          </div>
-        </div>
+        
+        
         
         <div className="space-y-4 lg:space-y-6">
           <div className="text-lg font-bold">Complete Package Includes:</div>
@@ -289,6 +250,5 @@ export const ProductDetails = () => {
           </div>
         </div>
       </Card>
-    </div>
-  );
+    </div>;
 };
