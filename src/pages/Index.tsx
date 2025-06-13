@@ -1,4 +1,3 @@
-
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductDetails } from "@/components/ProductDetails";
 import { ReviewsSection } from "@/components/ReviewsSection";
@@ -6,10 +5,8 @@ import { ArrowLeft, Shield, Clock, Download, Users, Star, Award, CheckCircle, Gl
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="border-b border-gray-200 p-3 md:p-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -25,32 +22,7 @@ const Index = () => {
       </div>
 
       {/* Trust Badges Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 py-4 md:py-6">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div className="flex flex-col items-center">
-              <Shield className="w-8 h-8 md:w-10 md:h-10 text-green-600 mb-2" />
-              <div className="text-xs md:text-sm font-medium text-gray-800">100% Safe</div>
-              <div className="text-xs text-gray-600">Secure Download</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <Download className="w-8 h-8 md:w-10 md:h-10 text-blue-600 mb-2" />
-              <div className="text-xs md:text-sm font-medium text-gray-800">Instant Access</div>
-              <div className="text-xs text-gray-600">Download Now</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <Users className="w-8 h-8 md:w-10 md:h-10 text-purple-600 mb-2" />
-              <div className="text-xs md:text-sm font-medium text-gray-800">10,000+ Users</div>
-              <div className="text-xs text-gray-600">Happy Parents</div>
-            </div>
-            <div className="flex flex-col items-center">
-              <Award className="w-8 h-8 md:w-10 md:h-10 text-orange-600 mb-2" />
-              <div className="text-xs md:text-sm font-medium text-gray-800">Money Back</div>
-              <div className="text-xs text-gray-600">Guarantee</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto p-4 md:p-6">
@@ -112,9 +84,7 @@ const Index = () => {
             </h2>
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-yellow-400 text-yellow-400" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-yellow-400 text-yellow-400" />)}
               </div>
               <span className="text-lg md:text-xl font-bold">4.8</span>
               <span className="text-sm md:text-base text-gray-600">(987+ reviews)</span>
@@ -142,8 +112,6 @@ const Index = () => {
           <ReviewsSection />
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
