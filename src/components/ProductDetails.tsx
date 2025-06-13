@@ -1,15 +1,11 @@
-
 import { useState } from "react";
 import { Heart, Star, ShoppingCart, Award, Download, FileText, Globe, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
 export const ProductDetails = () => {
   const [isFavorited, setIsFavorited] = useState(false);
-
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       {/* Price and Sale Info */}
       <div className="space-y-3">
         <div className="flex items-center gap-3">
@@ -37,48 +33,20 @@ export const ProductDetails = () => {
       </div>
 
       {/* Seller Info */}
-      <div className="flex items-center gap-3">
-        <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-          B
-        </div>
-        <div>
-          <span className="font-medium">Buscandoelequilibrio</span>
-          <div className="flex items-center gap-1">
-            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-            <span className="text-sm font-medium">5.0 (104)</span>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Add to Cart and Favorite */}
       <div className="flex gap-3">
         <Button className="flex-1 bg-black hover:bg-gray-800 text-white py-3 text-lg font-medium">
           Add to cart
         </Button>
-        <Button
-          variant="outline"
-          size="icon"
-          className="py-3 px-3"
-          onClick={() => setIsFavorited(!isFavorited)}
-        >
+        <Button variant="outline" size="icon" className="py-3 px-3" onClick={() => setIsFavorited(!isFavorited)}>
           <Heart className={`w-5 h-5 ${isFavorited ? 'fill-red-500 text-red-500' : ''}`} />
         </Button>
       </div>
 
       {/* Star Seller Badge */}
-      <Card className="p-4 bg-purple-50 border-purple-200">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center">
-            <Award className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <div className="font-medium text-purple-900">Star Seller.</div>
-            <div className="text-sm text-purple-700">
-              This seller consistently earned 5-star reviews, dispatched on time, and replied quickly to any messages they received.
-            </div>
-          </div>
-        </div>
-      </Card>
+      
 
       {/* Item Details */}
       <div className="space-y-4">
@@ -138,6 +106,5 @@ export const ProductDetails = () => {
           </div>
         </div>
       </Card>
-    </div>
-  );
+    </div>;
 };
