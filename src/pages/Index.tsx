@@ -1,13 +1,10 @@
-
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductDetails } from "@/components/ProductDetails";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { ArrowLeft, Heart, Flag } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="border-b border-gray-200 p-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -28,10 +25,7 @@ const Index = () => {
           <div className="relative">
             <ProductGallery />
             <div className="flex items-center justify-between mt-4">
-              <Button variant="ghost" className="flex items-center gap-2 text-gray-600">
-                <Flag size={16} />
-                Report this item to Etsy
-              </Button>
+              
             </div>
           </div>
 
@@ -46,8 +40,6 @@ const Index = () => {
           <ReviewsSection />
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
