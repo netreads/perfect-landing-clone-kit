@@ -27,11 +27,11 @@ export const ProductGallery = () => {
   return (
     <div className="space-y-4">
       {/* Main Image */}
-      <div className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden">
+      <div className="relative aspect-square bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
         <img
           src={productImages[currentImage]}
           alt="Health & Nutrition Social Media Templates Bundle - Professional Designs"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain p-2"
         />
         
         {/* Navigation Arrows */}
@@ -68,7 +68,7 @@ export const ProductGallery = () => {
             <img
               src={image}
               alt={`Health & nutrition template sample ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain bg-gray-50 p-1"
             />
           </button>
         ))}
