@@ -29,7 +29,7 @@ export const ProductGallery = () => {
       <div className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden">
         <img
           src={productImages[currentImage]}
-          alt="Kids Educational Worksheets Bundle - Sample Activities"
+          alt="Health & Wellness Social Media Templates Bundle - Professional Designs"
           className="w-full h-full object-cover"
         />
         
@@ -59,14 +59,14 @@ export const ProductGallery = () => {
             key={index}
             className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
               currentImage === index
-                ? "border-blue-500"
+                ? "border-green-500"
                 : "border-gray-200 hover:border-gray-300"
             }`}
             onClick={() => setCurrentImage(index)}
           >
             <img
               src={image}
-              alt={`Worksheet sample ${index + 1}`}
+              alt={`Health template sample ${index + 1}`}
               className="w-full h-full object-cover"
             />
           </button>
