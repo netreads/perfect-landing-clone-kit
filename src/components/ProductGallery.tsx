@@ -4,12 +4,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const productImages = [
-  "/lovable-uploads/2753c287-7486-4b4e-88ac-5ef5da90adde.png",
-  "/lovable-uploads/36375b62-7bb5-44c4-bbdc-78eb145680ac.png",
-  "/lovable-uploads/07cecaf3-a232-474d-beb1-0de858dc77a4.png",
-  "/lovable-uploads/b50a3a7c-fc72-4f15-9cee-40367f9b0214.png",
-  "/lovable-uploads/ba399d13-6152-42c7-937a-8ea129c5279d.png",
-  "/lovable-uploads/6ad93064-ce6f-4098-8d30-fc9b1c7de237.png"
+  "/lovable-uploads/9b8a1b41-ab17-436d-ac13-485c6a1e63d6.png",
+  "/lovable-uploads/09e28f3f-d0cd-4ad8-971d-f8094a74d91f.png",
+  "/lovable-uploads/54fe79bc-5d02-4b93-9b71-bd82ae53310c.png",
+  "/lovable-uploads/99d92588-3983-43ea-a518-7beb20b50276.png",
+  "/lovable-uploads/eba438c7-5667-4265-a7f6-6b861619176a.png",
+  "/lovable-uploads/def99a66-dbf1-4dd1-a20c-aec2a5be7d64.png",
+  "/lovable-uploads/36247320-8c9a-4cf4-9249-265f2f3f4b4a.png"
 ];
 
 export const ProductGallery = () => {
@@ -29,7 +30,7 @@ export const ProductGallery = () => {
       <div className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden">
         <img
           src={productImages[currentImage]}
-          alt="Health & Wellness Social Media Templates Bundle - Professional Designs"
+          alt="Health & Nutrition Social Media Templates Bundle - Professional Designs"
           className="w-full h-full object-cover"
         />
         
@@ -66,7 +67,7 @@ export const ProductGallery = () => {
           >
             <img
               src={image}
-              alt={`Health template sample ${index + 1}`}
+              alt={`Health & nutrition template sample ${index + 1}`}
               className="w-full h-full object-cover"
             />
           </button>
