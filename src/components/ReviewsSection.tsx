@@ -22,7 +22,7 @@ const reviews = [
   {
     id: 2,
     rating: 5,
-    author: "Sarah Mitchell",
+    author: "Arjun Patel",
     date: "1 week ago",
     content: "Worth every penny! I'm a health coach and these templates have transformed my social media presence. The before & after templates and testimonial layouts are perfect for showcasing client results. The Canva course bonus was incredibly helpful too. My follower count has grown by 300% in just 2 months!",
     verified: true,
@@ -48,7 +48,7 @@ const reviews = [
   {
     id: 4,
     rating: 5,
-    author: "Dr. Amanda Wilson",
+    author: "Dr. Kavya Reddy",
     date: "2 weeks ago",
     content: "Outstanding value! As a wellness practitioner, I needed professional content that would build trust with potential clients. This bundle exceeded all expectations! The human biology posts and did-you-know facts are incredibly well-researched. My appointment bookings have increased by 40% since using these templates.",
     verified: true,
@@ -61,7 +61,7 @@ const reviews = [
   {
     id: 5,
     rating: 5,
-    author: "Maria Rodriguez",
+    author: "Meera Singh",
     date: "2 weeks ago",
     content: "Life-changing for my business! I run a nutrition clinic and was spending 15+ hours weekly on content creation. Now I can create professional posts in under 5 minutes! The variety of templates - from marketing posts to educational content - covers everything I need. The 30-day challenge bonus was the cherry on top!",
     verified: true,
@@ -237,14 +237,6 @@ export const ReviewsSection = () => {
             </div>
           </Card>
         ))}
-      </div>
-
-      {/* Load More Reviews */}
-      <div className="text-center">
-        <Button variant="outline" className="px-8">
-          Load More Reviews
-        </Button>
-        <p className="text-sm text-gray-600 mt-2">Showing 5 of 1,247+ reviews</p>
       </div>
     </div>
   );

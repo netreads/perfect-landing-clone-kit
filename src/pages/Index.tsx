@@ -2,6 +2,7 @@
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductDetails } from "@/components/ProductDetails";
 import { ReviewsSection } from "@/components/ReviewsSection";
+import { FAQsSection } from "@/components/FAQsSection";
 import { ArrowLeft, Shield, Clock, Download, Users, Star, Award, CheckCircle, Globe, Heart, Flag, Zap, TrendingUp, Camera, Palette, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -226,6 +227,11 @@ const Index = () => {
         {/* Reviews Section */}
         <div className="mt-12 md:mt-16">
           <ReviewsSection />
+        </div>
+
+        {/* FAQs Section */}
+        <div className="mt-12 md:mt-16">
+          <FAQsSection />
         </div>
       </div>
     </div>;

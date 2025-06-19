@@ -87,13 +87,22 @@ export const ProductDetails = () => {
 
       {/* Add to Cart and Favorite */}
       <div className="flex gap-3">
-        <Button className="flex-1 bg-green-600 hover:bg-green-700 text-white py-4 md:py-5 text-lg md:text-xl font-medium">
-          <ShoppingCart className="w-6 h-6 md:w-7 md:h-7 mr-2" />
+        <Button className="flex-1 bg-green-600 hover:bg-green-700 text-white py-6 md:py-7 text-xl md:text-2xl font-medium shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+          <ShoppingCart className="w-7 h-7 md:w-8 md:h-8 mr-2" />
           YES! I WANT THIS NOW
         </Button>
-        <Button variant="outline" size="icon" className="py-4 md:py-5 px-4 md:px-5" onClick={() => setIsFavorited(!isFavorited)}>
-          <Heart className={`w-6 h-6 md:w-7 md:h-7 ${isFavorited ? 'fill-red-500 text-red-500' : ''}`} />
+        <Button variant="outline" size="icon" className="py-6 md:py-7 px-5 md:px-6 shadow-md" onClick={() => setIsFavorited(!isFavorited)}>
+          <Heart className={`w-7 h-7 md:w-8 md:h-8 ${isFavorited ? 'fill-red-500 text-red-500' : ''}`} />
         </Button>
+      </div>
+
+      {/* Payment Credibility Image */}
+      <div className="flex justify-center">
+        <img 
+          src="/lovable-uploads/e1a78e8e-3cb0-4295-9942-c74e4774bb6a.png" 
+          alt="Secure payments powered by Stripe - MasterCard, Visa, Discover, American Express accepted"
+          className="h-12 md:h-14 object-contain"
+        />
       </div>
 
       {/* Bonus Offers */}
